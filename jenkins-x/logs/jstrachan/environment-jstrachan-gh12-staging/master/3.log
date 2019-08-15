@@ -1,0 +1,46 @@
+Step: step-credential-initializer-k9z8s:
+
+{"level":"warn","ts":1565886939.4815888,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565886939.4821744,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-7m98d:
+
+{"level":"warn","ts":1565886940.4579911,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565886940.4594285,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-*********-environment-jstr-vv9jq:
+
+{"level":"warn","ts":1565886946.487078,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565886947.1680691,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-gh12-staging.git @ master in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:","time":"2019-08-15T16:35:47Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-15T16:35:47Z"}
+Step: step-merge-pull-refs:
+
+SKIP merge-pull-refs: Nothing to merge
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-15T16:35:48Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.19 to /builder/home/.**/jenkins-x-versions","time":"2019-08-15T16:35:48Z"}
+From https://github.com/jenkins-x/jenkins-x-versions
+ * tag               v1.0.19    -> FETCH_HEAD
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-15T16:35:51Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-effective.yml","time":"2019-08-15T16:35:53Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-15T16:35:55Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.19 to /builder/home/.**/jenkins-x-versions","time":"2019-08-15T16:35:55Z"}
+From https://github.com/jenkins-x/jenkins-x-versions
+ * tag               v1.0.19    -> FETCH_HEAD
+{"level":"info","msg":"running command: ** step next-version --use-git-tag-only --tag","time":"2019-08-15T16:35:57Z"}
+{"level":"info","msg":"created new version: 0.0.3 and written to file: ./VERSION","time":"2019-08-15T16:35:58Z"}
+{"level":"info","msg":"Tag v0.0.3 created and pushed to remote origin","time":"2019-08-15T16:36:01Z"}
+{"level":"info","msg":"","time":"2019-08-15T16:36:01Z"}
+{"level":"info","msg":"PipelineActivity for *********-environment-*********-gh12-staging-master-3","time":"2019-08-15T16:36:01Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-15T16:36:01Z"}
+{"level":"info","msg":"upserted PipelineResource *********-environment-********* for the git repository https://github.com/*********/environment-*********-gh12-staging.git and branch master","time":"2019-08-15T16:36:01Z"}
+{"level":"info","msg":"upserted Task *********-environment-*********-pnrtq-from-build-pack-3","time":"2019-08-15T16:36:01Z"}
+{"level":"info","msg":"upserted Pipeline *********-environment-*********-pnrtq-3","time":"2019-08-15T16:36:01Z"}
+{"level":"info","msg":"created PipelineRun *********-environment-*********-pnrtq-3","time":"2019-08-15T16:36:01Z"}
+{"level":"info","msg":"created PipelineStructure *********-environment-*********-pnrtq-3","time":"2019-08-15T16:36:01Z"}
