@@ -1,0 +1,80 @@
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mapp-extension[0m and container [32mstep-credential-initializer-psrc9[0m
+{"level":"warn","ts":1567002127.1749265,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567002127.1753552,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mapp-extension[0m and container [32mstep-working-dir-initializer-tv26k[0m
+{"level":"warn","ts":1567002127.5516589,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567002127.5529673,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mapp-extension[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mapp-extension[0m and container [32mstep-git-source-meta-jstrachan-environment-jstr-hmkm4[0m
+{"level":"warn","ts":1567002131.608835,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567002132.7731888,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-gh12-staging.git @ 7b6db1643dbfa732facaf7a62b8ed662ec66d3ce in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mapp-extension[0m and container [32mstep-git-merge[0m
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:7b6db1643dbfa732facaf7a62b8ed662ec66d3ce,16:bb5c13bedf639e5e07efa317f6136ba65abcde06","time":"2019-08-28T14:22:12Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin bb5c13bedf639e5e07efa317f6136ba65abcde06: 7b6db1643dbfa732facaf7a62b8ed662ec66d3ce: in ","time":"2019-08-28T14:22:14Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-28T14:22:14Z"}
+{"level":"debug","msg":"ran git reset --hard 7b6db1643dbfa732facaf7a62b8ed662ec66d3ce in ","time":"2019-08-28T14:22:14Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-28T14:22:14Z"}
+{"level":"debug","msg":"ran git merge bb5c13bedf639e5e07efa317f6136ba65abcde06 in ","time":"2019-08-28T14:22:14Z"}
+{"level":"info","msg":"Merged SHA bb5c13bedf639e5e07efa317f6136ba65abcde06 with commit message 'chore: Promote nodey206 to version 0.0.12' into base branch master","time":"2019-08-28T14:22:14Z"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mapp-extension[0m and container [32mstep-merge-pull-refs[0m
+{"level":"debug","msg":"ran git fetch origin bb5c13bedf639e5e07efa317f6136ba65abcde06: 7b6db1643dbfa732facaf7a62b8ed662ec66d3ce: in ","time":"2019-08-28T14:22:15Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-28T14:22:15Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-28T14:22:15Z"}
+{"level":"debug","msg":"ran git reset --hard 7b6db1643dbfa732facaf7a62b8ed662ec66d3ce in ","time":"2019-08-28T14:22:15Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-28T14:22:15Z"}
+{"level":"debug","msg":"ran git merge bb5c13bedf639e5e07efa317f6136ba65abcde06 in ","time":"2019-08-28T14:22:15Z"}
+{"level":"info","msg":"Merged SHA bb5c13bedf639e5e07efa317f6136ba65abcde06 with commit message 'chore: Promote nodey206 to version 0.0.12' into base branch master","time":"2019-08-28T14:22:15Z"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mapp-extension[0m and container [32mstep-create-effective-pipeline[0m
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-28T14:22:16Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.34 to /builder/home/.**/jenkins-x-versions","time":"2019-08-28T14:22:16Z"}
+From https://github.com/jenkins-x/jenkins-x-versions
+ * tag               v1.0.34    -> FETCH_HEAD
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-28T14:22:20Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-28T14:22:22Z"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mapp-extension[0m and container [32mstep-create-tekton-crds[0m
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-28T14:22:23Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.34 to /builder/home/.**/jenkins-x-versions","time":"2019-08-28T14:22:23Z"}
+From https://github.com/jenkins-x/jenkins-x-versions
+ * tag               v1.0.34    -> FETCH_HEAD
+{"level":"info","msg":"PipelineActivity for *********-environment-*********-gh12-staging-PR-16-1","time":"2019-08-28T14:22:25Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-28T14:22:25Z"}
+{"level":"info","msg":"upserted PipelineResource *********-environment-********* for the git repository https://github.com/*********/environment-*********-gh12-staging.git","time":"2019-08-28T14:22:25Z"}
+{"level":"info","msg":"upserted Task *********-environment-*********-from-build-pack-1","time":"2019-08-28T14:22:25Z"}
+{"level":"info","msg":"upserted Pipeline *********-environment-*********-1","time":"2019-08-28T14:22:25Z"}
+{"level":"info","msg":"created PipelineRun *********-environment-*********-1","time":"2019-08-28T14:22:25Z"}
+{"level":"info","msg":"created PipelineStructure *********-environment-*********-1","time":"2019-08-28T14:22:25Z"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-dj4lh[0m
+{"level":"warn","ts":1567002146.7034328,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567002146.703854,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-hhgjt[0m
+{"level":"warn","ts":1567002147.1113865,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567002147.112469,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-environment-jstrachan-mgldx[0m
+{"level":"warn","ts":1567002152.237486,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567002153.3930128,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-gh12-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-environment-jstrachan-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
