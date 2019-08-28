@@ -1,37 +1,83 @@
-Step: step-credential-initializer-n87v4:
 
-{"level":"warn","ts":1565886301.808274,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1565886301.8148968,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
-Step: step-working-dir-initializer-x7bff:
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mapp-extension[0m and container [32mstep-credential-initializer-jhpq2[0m
+{"level":"warn","ts":1566998289.2141333,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566998289.2152658,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-{"level":"warn","ts":1565886303.0533364,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1565886303.0553262,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
-Step: step-place-tools:
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mapp-extension[0m and container [32mstep-working-dir-initializer-9cxjl[0m
+{"level":"warn","ts":1566998289.8739781,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1566998289.875427,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
 
-Step: step-git-source-*********-environment-*********-858dw:
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mapp-extension[0m and container [32mstep-place-tools[0m
 
-{"level":"warn","ts":1565886309.0994227,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1565886309.6800954,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-gh12-staging.git @ v0.0.2 in path /workspace/source"}
-Step: step-git-merge:
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mapp-extension[0m and container [32mstep-git-source-meta-jstrachan-environment-jstr-b6mkr[0m
+{"level":"warn","ts":1566998293.921254,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566998294.9780369,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-gh12-staging.git @ master in path /workspace/source"}
 
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mapp-extension[0m and container [32mstep-git-merge[0m
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:","time":"2019-08-28T13:18:15Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-28T13:18:15Z"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mapp-extension[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mapp-extension[0m and container [32mstep-create-effective-pipeline[0m
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-28T13:18:15Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.34 to /builder/home/.**/jenkins-x-versions","time":"2019-08-28T13:18:15Z"}
+From https://github.com/jenkins-x/jenkins-x-versions
+ * tag               v1.0.34    -> FETCH_HEAD
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-28T13:18:19Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-effective.yml","time":"2019-08-28T13:18:21Z"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mapp-extension[0m and container [32mstep-create-tekton-crds[0m
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-28T13:18:22Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.34 to /builder/home/.**/jenkins-x-versions","time":"2019-08-28T13:18:22Z"}
+From https://github.com/jenkins-x/jenkins-x-versions
+ * tag               v1.0.34    -> FETCH_HEAD
+{"level":"info","msg":"running command: ** step next-version --use-git-tag-only --tag","time":"2019-08-28T13:18:24Z"}
+{"level":"info","msg":"created new version: 0.0.9 and written to file: ./VERSION","time":"2019-08-28T13:18:26Z"}
+{"level":"info","msg":"Tag v0.0.9 created and pushed to remote origin","time":"2019-08-28T13:18:29Z"}
+{"level":"info","msg":"","time":"2019-08-28T13:18:29Z"}
+{"level":"info","msg":"PipelineActivity for *********-environment-*********-gh12-staging-master-2","time":"2019-08-28T13:18:29Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-28T13:18:29Z"}
+{"level":"info","msg":"upserted PipelineResource *********-environment-********* for the git repository https://github.com/*********/environment-*********-gh12-staging.git","time":"2019-08-28T13:18:29Z"}
+{"level":"info","msg":"upserted Task *********-environment-*********-4prt5-from-build-pack-2","time":"2019-08-28T13:18:29Z"}
+{"level":"info","msg":"upserted Pipeline *********-environment-*********-4prt5-2","time":"2019-08-28T13:18:29Z"}
+{"level":"info","msg":"created PipelineRun *********-environment-*********-4prt5-2","time":"2019-08-28T13:18:29Z"}
+{"level":"info","msg":"created PipelineStructure *********-environment-*********-4prt5-2","time":"2019-08-28T13:18:29Z"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-q9rb8[0m
+{"level":"warn","ts":1566998310.9211614,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566998310.9217315,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-gnjzq[0m
+{"level":"warn","ts":1566998311.4901834,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1566998311.4917648,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-environment-jstrachan-pcghp[0m
+{"level":"warn","ts":1566998317.5923924,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566998318.7121086,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-gh12-staging.git @ v0.0.9 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 WARNING: no SHAs to merge, falling back to initial cloned commit
-Step: step-setup-**-git-credentials:
 
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /builder/home/git/credentials
-Step: step-build-helm-apply:
 
+Showing logs for build [32mjstrachan-environment-jstrachan-4prt5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
 Modified file /workspace/source/env/Chart.yaml to set the chart to version 2
-Copying the helm source directory /workspace/source/env to a temporary location for building and applying /tmp/**-helm-apply-812503973/env
-Applying helm chart at /tmp/**-helm-apply-812503973/env as release name ** to namespace **-staging
+Copying the helm source directory /workspace/source/env to a temporary location for building and applying /tmp/**-helm-apply-942534815/env
+Applying helm chart at /tmp/**-helm-apply-942534815/env as release name ** to namespace **-staging
 WARNING: failed to create system vault in namespace ** due to no "**-vault-*********-gh1" vault found in namespace "**"
 verifying the helm requirements versions in dir: . using version stream URL:  and git ref: 
 Deleting and cloning the Jenkins X versions repo
-Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.19 to /builder/home/.**/jenkins-x-versions
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.34 to /builder/home/.**/jenkins-x-versions
 From https://github.com/jenkins-x/jenkins-x-versions
- * tag               v1.0.19    -> FETCH_HEAD
+ * tag               v1.0.34    -> FETCH_HEAD
 Ignoring templates/.gitignore
-Wrote chart values.yaml /tmp/**-helm-apply-812503973/env/values.yaml generated from directory tree
-generated helm /tmp/**-helm-apply-812503973/env/values.yaml
+Wrote chart values.yaml /tmp/**-helm-apply-942534815/env/values.yaml generated from directory tree
+generated helm /tmp/**-helm-apply-942534815/env/values.yaml
 
 PipelineSecrets: {}
 cleanup:
@@ -56,7 +102,7 @@ jenkins:
     Global: {}
 prow: {}
 
-Using values files: /tmp/**-helm-apply-812503973/env/values.yaml
+Using values files: /tmp/**-helm-apply-942534815/env/values.yaml
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
@@ -68,10 +114,8 @@ Successfully added Helm repository chartmuseum.jenkins-x.io.
 Applying Apps chart overrides
 Applying chart overrides
 Deleting and cloning the Jenkins X versions repo
-Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.19 to /builder/home/.**/jenkins-x-versions
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.34 to /builder/home/.**/jenkins-x-versions
 From https://github.com/jenkins-x/jenkins-x-versions
- * tag               v1.0.19    -> FETCH_HEAD
+ * tag               v1.0.34    -> FETCH_HEAD
 
 
-service "nodey203" deleted
-deployment.apps "**-nodey203" deleted
